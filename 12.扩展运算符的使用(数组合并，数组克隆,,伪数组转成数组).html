@@ -1,0 +1,42 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-05 19:10:47
+ * @LastEditTime: 2021-12-05 19:18:42
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \ccit-webe:\2021年学习笔记\es6\12.扩展运算符的使用.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        // 1. 数组的合并
+        const arr1 = [1]
+        const arr2 = [2]
+        const arr3 = [...arr1, ...arr2]
+        console.log(arr3); //[1, 2]
+
+        // 2.数组的克隆
+        const arr4 = [...arr3]
+        console.log(arr4); //[1, 2]
+
+        //3.将伪书组转换成真正的数组
+        const a1 = document.querySelectorAll('div')
+        const arr5 = [...a1]
+        console.log(arr5); //[div, div, div]
+        //arguments也可以
+    </script>
+</body>
+
+</html>
