@@ -1,8 +1,49 @@
 <!--
  * @Author: your name
  * @Date: 2021-12-05 18:24:58
- * @LastEditTime: 2021-12-05 18:24:59
+ * @LastEditTime: 2021-12-05 18:48:11
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: \ccit-webe:\2021年学习笔记\es6\9.函数参数默认值.html
 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // es6 允许给函数参数赋值初始值
+        // 1.形参初始值 具有默认值的参数，一般位置要靠后
+        //(a,  c = 10,b)//NaN
+        function add(a, b, c = 10) {
+            return a + b + c
+        }
+        console.log(add(1, 2));
+        // 2.与解构赋值结合
+        function connect({
+            host,
+            username,
+            password,
+            port
+        }) {
+            console.log(host);
+            console.log(username);
+            console.log(password);
+            console.log(port);
+        }
+        connect({
+            host: 'www.baidu.com',
+            username: 'root',
+            password: 'root',
+            port: '8080'
+        })
+    </script>
+</body>
+
+</html>
