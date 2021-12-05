@@ -1,0 +1,49 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-05 13:32:39
+ * @LastEditTime: 2021-12-05 13:51:52
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \ccit-webe:\2021年学习笔记\es6\4.变量的解构赋值.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //ES6 允许按照一定模式从数组和对象中提取值，对变量进行赋值
+        //这就称之为结构赋值、
+
+        // 1.数组的结构
+        const arr = ['张三', '李四']
+        let [xiao, zhang] = arr
+        console.log(xiao, zhang); //张三 李四
+
+        //2.对象的解构
+
+        const obj1 = {
+            name: '往往',
+            age: 18,
+            zuoshi: function () {
+                const _this = this
+                console.log(_this + '我叫' + _this.name);
+
+
+            }
+        }
+        let {
+            zuoshi
+        } = obj1
+        zuoshi() //[object Window]我叫
+        obj1.zuoshi() //[object Object]我叫往往
+    </script>
+</body>
+
+</html>

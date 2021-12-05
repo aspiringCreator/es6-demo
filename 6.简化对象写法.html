@@ -1,0 +1,38 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-05 14:39:56
+ * @LastEditTime: 2021-12-05 14:46:04
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \ccit-webe:\2021年学习笔记\es6\6.简化对象写法.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //es6允许在大括号里面，直接写入变量和函数，作为对象和属性方法
+        //这样的写法更加简洁
+        let name = '创正';
+        let change = function () {
+            console.log('提高技能');
+        }
+        const school = {
+            name,
+            change,
+            fn1() {
+                console.log('函数简写');
+            }
+        }
+        console.log(school);
+    </script>
+</body>
+
+</html>

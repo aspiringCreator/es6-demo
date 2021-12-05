@@ -1,0 +1,77 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-05 15:27:16
+ * @LastEditTime: 2021-12-05 15:40:05
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \ccit-webe:\2021年学习笔记\es6\8.箭头函数的实践与应用场景.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .i {
+            width: 500px;
+            height: 500px;
+            background: red;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="i"></div>
+    <script>
+        //需求点击div 2秒后变成pink'色
+
+        //旧做法
+        //获取元素
+        // var el = document.querySelector('.i')
+        // el.addEventListener("click", function () {
+        //     //保存this
+        //     let _this = this
+        //     setTimeout(function () {
+        //         _this.style.background = 'pink'
+        //     }, 2000)
+        // })
+
+        // 新做法
+        var el = document.querySelector('.i')
+        el.addEventListener("click", function () {
+            setTimeout(() => {
+                this.style.background = 'pink'
+            }, 2000)
+        })
+
+        //需求筛选出数组为偶数的
+
+        // 老做法
+        const arr = [88, 5, 6, 7, 55, 30, 99]
+        let even = arr.filter(function (item) {
+            if (item % 2 === 0) {
+                return true
+            } else {
+                return false
+            }
+        })
+        console.log(even);
+
+        //新做法
+        let even2 = arr.filter(item => item % 2 === 0)
+        console.log(even2);
+
+        // 注意:
+        //  箭头函数适合与this无关的回调, 定时器,数组的方法回调
+        //  箭头函数不适合与this有关的回调,事件回调,对象的方法(不适合不代表不能)
+    </script>
+</body>
+
+</html>

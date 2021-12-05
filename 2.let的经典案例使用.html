@@ -1,0 +1,53 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-05 13:14:12
+ * @LastEditTime: 2021-12-05 13:21:35
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \ccit-webe:\2021年学习笔记\es6\2.let的经典案例使用.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list {
+            border: 1px solid #ccc;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="list">1</div>
+        <div class="list">2</div>
+        <div class="list">3</div>
+    </div>
+    <script>
+        // var arr = document.querySelectorAll('.list')
+        // for (var i = 0; i < arr.length; i++) {
+        //     arr[i].onclick = function () {
+        //         // this.style.background = 'red'
+        //         arr[i].style.background = 'red'
+        //     }
+        // }
+        // console.log(i); //3
+
+        var arr = document.querySelectorAll('.list')
+        for (let i = 0; i < arr.length; i++) {
+            arr[i].onclick = function () {
+                // this.style.background = 'red'
+                arr[i].style.background = 'red'
+            }
+        }
+        console.log(i); // i is not defined
+    </script>
+</body>
+
+</html>
